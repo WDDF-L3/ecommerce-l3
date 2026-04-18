@@ -79,3 +79,44 @@ document.addEventListener("click", function(e){
         e.target.closest(".cart-item").remove();
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    function updateItemTotal(item) {
+        let qty = item.querySelector(".quantity").value;
+        let price = item.querySelector(".quantity").dataset.price;
+
+        let total = qty * price;
+        item.querySelector(".item-total").innerText = "$" + total.toFixed(2);
+    }
+
+    function updateCartTotal() {
+        let grandTotal = 0;
+        document.querySelectorAll(".cart-item").forEach(item => {
+            let totalText = item.querySelector(".item-total").innerText.replace("$", "");
+            grandTotal += parseFloat(totalText);
+        });
+
+        console.log("Total: $" + grandTotal.toFixed(2)); // চাইলে UI তে দেখাতে পারো
+    }
+
+    // Quantity change
+    document.querySelectorAll(".quantity").forEach(input => {
+        input.addEventListener("input", function () {
+            let item = this.closest(".cart-item");
+            updateItemTotal(item);
+            updateCartTotal();
+        });
+    });
+
+    // Remove item
+    document.querySelectorAll(".remove-item").forEach(btn => {
+        btn.addEventListener("click", function () {
+            let item = this.closest(".cart-item");
+            item.remove();
+            updateCartTotal();
+        });
+    });
+
+});
