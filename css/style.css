@@ -1,0 +1,35 @@
+.nav-item{
+    border-radius: 10px;
+    padding: 3px 10px;
+    margin: 0px 5px;
+    transition: .5s ease;
+}
+.nav-item:hover{
+    background-color: aquamarine;
+}
+
+.card img{
+    height: 200px;
+}
+.zoom img{
+    transition: 1s ease;
+}
+
+.zoom img:hover{
+    transform: scale(1.5);
+}
+
+.col-md-3 .card {
+    transition: .5s ease;
+    overflow: hidden;
+}
+.col-md-3 .card:hover{
+    transform: translateY(-5px);
+    box-shadow: 1px 1px 1px 3px rgb(233, 219, 219);
+}
+.col-md-3 .card img{
+    transition: .5s ease;
+}
+.col-md-3 .card img:hover{
+    transform: scale(1.1);
+}
