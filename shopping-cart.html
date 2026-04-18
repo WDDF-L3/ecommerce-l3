@@ -99,59 +99,40 @@
     </nav>
     <!-- breadcrumb end  -->
 
-    <section class="container">  
+    <section class="container">
         <div class="row">
 
-        <!-- Cart Product List Section -->
-        <div class="col-md-8">
-            <div class="card mb-4">
-                <div class="card-header">
-                    <h5>Product Lists</h5>
-                </div>
-                <div class="card-body">
-
-                    <!-- Product -->
-                    <div class="row align-items-center mb-3 cart-item">
-                        <div class="col-md-3">
-                            <img src="image/p1.avif" class="cart-img img-fluid">
-                        </div>
-                        <div class="col-md-4">
-                            <h6>Product Name</h6>
-                            <small class="text-muted">BDT - 500 Taka</small>
-                        </div>
-                        <div class="col-md-2">
-                            <input type="number" class="form-control quantity" value="1" min="1" data-price="50">
-                        </div>
-                        <div class="col-md-2">
-                            <strong class="item-total">$50.00</strong>
-                        </div>
-                        <div class="col-md-1">
-                            <button class="btn btn-danger btn-sm remove-item">×</button>
-                        </div>
+            <!-- Cart Product List Section -->
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>Product Lists</h5>
                     </div>
-
+                    <div class="card-body" id="cart-items">
+                        <!-- Product -->
+                        
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="summary-box mb-3">
-                <h5>Cart Summary</h5>
-                <hr>
-                <p>Subtotal: <span id="subtotal">BDT - 500 Taka</span></p>
-                <p>Discount: <span id="discount">BDT - 0 Taka</span></p>
-                <h6>Total: <span id="total">BDT - 500 Taka</span></h6>
-                <button class="btn btn-primary w-100 mt-3">Checkout</button>
+            <div class="col-md-4">
+                <div class="summary-box mb-3">
+                    <h5>Cart Summary</h5>
+                    <hr>
+                    <p>Subtotal: <span id="subtotal">BDT - 500 Taka</span></p>
+                    <p>Discount: <span id="discount">BDT - 0 Taka</span></p>
+                    <h6>Total: <span id="total">BDT - 500 Taka</span></h6>
+                    <button class="btn btn-primary w-100 mt-3">Checkout</button>
+                </div>
+
+                <!-- Coupon Section -->
+                <div class="summary-box">
+                    <h6>Apply Coupon</h6>
+                    <input type="text" id="coupon" class="form-control mb-2" placeholder="Enter coupon">
+                    <button class="btn btn-outline-success w-100" onclick="applyCoupon()">Apply</button>
+                </div>
             </div>
 
-            <!-- Coupon Section -->
-            <div class="summary-box">
-                <h6>Apply Coupon</h6>
-                <input type="text" id="coupon" class="form-control mb-2" placeholder="Enter coupon">
-                <button class="btn btn-outline-success w-100" onclick="applyCoupon()">Apply</button>
-            </div>
         </div>
-
-    </div>
     </section>
 
     <!-- big footer start  -->
